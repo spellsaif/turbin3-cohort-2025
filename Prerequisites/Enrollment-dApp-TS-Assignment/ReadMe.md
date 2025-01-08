@@ -6,3 +6,6 @@ This is a Turbin3 Cohort 2025 Prequisite Assignemnt. Task is to follow all the i
  - Airdropping some `Sol` to our `Wallet` on `Devnet`.
  - Transferring 0.1 `Sol` to `Turbin3 Wallet` address.
  - Transferring All `Sol` to `Turbin3 Wallet` address.
+
+
+# Submitting
