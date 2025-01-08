@@ -7,6 +7,7 @@
     "keygen": "ts-node ./keygen.ts",
     "airdrop": "ts-node ./airdrop.ts",
     "transfer": "ts-node ./transfer.ts",
+    "transferAll": "ts-node ./transferAll.ts",
     "enroll": "ts-node ./enroll.ts",
     "toBase58": "ts-node ./toBase58.ts"
   },
