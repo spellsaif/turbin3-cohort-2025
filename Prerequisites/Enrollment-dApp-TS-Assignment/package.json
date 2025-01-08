@@ -12,6 +12,7 @@
     "toBase58": "ts-node ./toBase58.ts"
   },
   "dependencies": {
+    "@coral-xyz/anchor": "^0.30.1",
     "@solana/web3.js": "^1.98.0",
     "@types/node": "^22.10.5",
     "bs58": "^6.0.0",
