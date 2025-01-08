@@ -5,3 +5,4 @@ This is a Turbin3 Cohort 2025 Prequisite Assignemnt. Task is to follow all the i
  - Creating tests using  `Rust` in order to test whether conversion between `Base58` to `Bytes Array` and vice versa.
  - Airdropping some `Sol` to our `Wallet` on `Devnet`.
  - Transferring 0.1 `Sol` to `Turbin3 Wallet` address.
+ - Transferring All `Sol` to `Turbin3 Wallet` address.
