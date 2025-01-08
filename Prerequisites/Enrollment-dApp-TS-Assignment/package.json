@@ -1,0 +1,15 @@
+{
+  "name": "Enrollment-dApp-TS-Assignment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@solana/web3.js": "^1.98.0",
+    "@types/node": "^22.10.5",
+    "bs58": "^6.0.0",
+    "typescript": "^5.7.2"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2"
+  }
+}
