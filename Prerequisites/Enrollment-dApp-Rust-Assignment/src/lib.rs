@@ -1,3 +1,7 @@
+mod programs;
+
+use crate::programs::turbin3_prereq::{WbaPrereqProgram, CompleteArgs, UpdateArgs}; 
+
 use solana_sdk::{
     signature::{Keypair, Signer, read_keypair_file}, 
     pubkey::Pubkey,
@@ -13,7 +17,8 @@ use solana_client::rpc_client::RpcClient;
 use std::str::FromStr;
 
 use solana_program::{
-    system_instruction::transfer
+    system_instruction::transfer,
+    system_program
 };
 
 
@@ -184,5 +189,50 @@ mod tests {
         println!("Success! Check out your TX here: https://explorer.solana.com/tx/{}/?cluster=devnet", signature);
                             
     }
+
+    #[test]
+    fn enroll() {
+        
+        // Create a Solana devnet connection
+        let rpc_client = RpcClient::new(RPC_URL);
+
+        // Let's define our accounts
+        let signer = read_keypair_file("Turbin3-wallet.json").expect("Couldn't find wallet file");
+
+        let prereq = WbaPrereqProgram::derive_program_address(&[b"prereq", signer.pubkey().to_bytes().as_ref()]);
+
+        // Define our instruction data 
+        let args = CompleteArgs{github: b"spellsaif".to_vec() };
+
+        // Get recent blockhash
+        let blockhash = rpc_client 
+                            .get_latest_blockhash() 
+                            .expect("Failed to get recentblockhash");
+
+        
+        // Now we can invoke the "complete" function let transaction =
+        let transaction = WbaPrereqProgram::complete(
+                            &[&signer.pubkey(), &prereq, &system_program::id()], &args, Some(&signer.pubkey()),
+                            &[&signer],
+                            blockhash 
+                          );
+
+
+        // Send the transaction
+        let signature = rpc_client 
+                            .send_and_confirm_transaction(&transaction) 
+                            .expect("Failed to send transaction");
+
+
+        // Print our transaction out 
+        println!("Success! Check out your TX here: https://explorer.solana.com/tx/{}/?cluster=devnet", signature);
+    
+
+        // https://explorer.solana.com/tx/3E61aKKBAQCewpJgEDxRtqHLh8EzSwNFUiPyqhuw76cWUds9L26NzNPP21kDPpAfNfzCPswbwLbw7LTFPD33p4Dk?cluster=devnet                  
+        
+     }
+
+   
+
 }
 
