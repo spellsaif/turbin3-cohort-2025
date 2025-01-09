@@ -36,14 +36,16 @@ mod tests {
     fn base58_to_wallet() {
         println!("Input your private key as base58:");
         let stdin = io::stdin();
-        let base58 = stdin.lock().lines().next().unwrap().unwrap(); println!("\nYour wallet file is:");
+        let base58 = stdin.lock().lines().next().unwrap().unwrap(); 
+        println!("\nYour wallet file is:");
         let wallet = bs58::decode(base58).into_vec().unwrap(); println!("{:?}", wallet);
     }
 
     #[test]
     fn wallet_to_base58() {
-        println!("Input your private key as a wallet file byte array:"); let stdin = io::stdin(); let
-        wallet = stdin.lock()
+        println!("Input your private key as a wallet file byte array:"); 
+        let stdin = io::stdin(); 
+        let wallet = stdin.lock()
                 .lines()
                 .next()
                 .unwrap()
