@@ -230,8 +230,12 @@ mod tests {
         println!("Success! Check out your TX here: https://explorer.solana.com/tx/{}/?cluster=devnet", signature);
     
 
+        //old address
         // https://explorer.solana.com/tx/3E61aKKBAQCewpJgEDxRtqHLh8EzSwNFUiPyqhuw76cWUds9L26NzNPP21kDPpAfNfzCPswbwLbw7LTFPD33p4Dk?cluster=devnet                  
         
+    
+        //new address
+        //https://explorer.solana.com/tx/39zNX7jzT5XHFxAJoTaqSH3DkJAna6H3z3XYUUCpYQ3aYtVBVTH7pBn8Vi3UwY3Fw4hmKQfWprEGSfBNEokSWi6r?cluster=devnet
      }
 
    
