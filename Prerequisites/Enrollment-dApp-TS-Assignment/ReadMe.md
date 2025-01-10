@@ -11,30 +11,58 @@ This is a Turbin3 Cohort 2025 Prequisite Assignemnt. Task is to follow all the i
 # Getting Turbin3Program(IDL)
 ```json
 {
-    "version": "0.1.0",
-    "name": "wba_prereq",
+    "address": "WBAQSygkwMox2VuWKU133NxFrpDZUBdvSBeaBEue2Jq",
     "metadata": {
-        
-        "address": "HC2oqz2p6DEWfrahenqdq2moUcga9c9biqRBcdK3XKU1" 
+      "name": "wba_prereq",
+      "version": "0.1.0",
+      "spec": "0.1.0",
+      "description": "Created with Anchor"
     },
     "instructions": [
       {
         "name": "complete",
+        "discriminator": [
+          0,
+          77,
+          224,
+          147,
+          136,
+          25,
+          88,
+          76
+        ],
         "accounts": [
           {
             "name": "signer",
-            "isMut": true,
-            "isSigner": true
+            "writable": true,
+            "signer": true
           },
           {
             "name": "prereq",
-            "isMut": true,
-            "isSigner": false
+            "writable": true,
+            "pda": {
+              "seeds": [
+                {
+                  "kind": "const",
+                  "value": [
+                    112,
+                    114,
+                    101,
+                    114,
+                    101,
+                    113
+                  ]
+                },
+                {
+                  "kind": "account",
+                  "path": "signer"
+                }
+              ]
+            }
           },
           {
-            "name": "systemProgram",
-            "isMut": false,
-            "isSigner": false
+            "name": "system_program",
+            "address": "11111111111111111111111111111111"
           }
         ],
         "args": [
@@ -46,21 +74,29 @@ This is a Turbin3 Cohort 2025 Prequisite Assignemnt. Task is to follow all the i
       },
       {
         "name": "update",
+        "discriminator": [
+          219,
+          200,
+          88,
+          176,
+          158,
+          63,
+          253,
+          127
+        ],
         "accounts": [
           {
             "name": "signer",
-            "isMut": true,
-            "isSigner": true
+            "writable": true,
+            "signer": true
           },
           {
             "name": "prereq",
-            "isMut": true,
-            "isSigner": false
+            "writable": true
           },
           {
-            "name": "systemProgram",
-            "isMut": false,
-            "isSigner": false
+            "name": "system_program",
+            "address": "11111111111111111111111111111111"
           }
         ],
         "args": [
@@ -73,7 +109,29 @@ This is a Turbin3 Cohort 2025 Prequisite Assignemnt. Task is to follow all the i
     ],
     "accounts": [
       {
-        "name": "PrereqAccount",
+        "name": "Q2Prereq2024",
+        "discriminator": [
+          210,
+          203,
+          168,
+          103,
+          251,
+          233,
+          204,
+          6
+        ]
+      }
+    ],
+    "errors": [
+      {
+        "code": 6000,
+        "name": "InvalidGithubAccount",
+        "msg": "Invalid Github account"
+      }
+    ],
+    "types": [
+      {
+        "name": "Q2Prereq2024",
         "type": {
           "kind": "struct",
           "fields": [
@@ -83,23 +141,15 @@ This is a Turbin3 Cohort 2025 Prequisite Assignemnt. Task is to follow all the i
             },
             {
               "name": "key",
-              "type": "publicKey"
+              "type": "pubkey"
             }
           ]
         }
       }
-    ],
-    "errors": [
-      {
-        "code": 6000,
-        "name": "InvalidGithubAccount",
-        "msg": "Invalid Github account"
-      }
     ]
   }
-  
   ```
-- You can get IDL from this address: `HC2oqz2p6DEWfrahenqdq2moUcga9c9biqRBcdK3XKU1`
+- You can get IDL from this address: `WBAQSygkwMox2VuWKU133NxFrpDZUBdvSBeaBEue2Jq`
 - It is needed for interacting programs on `Solana` Blockchain
 
 # Submitting Our Github Username 
