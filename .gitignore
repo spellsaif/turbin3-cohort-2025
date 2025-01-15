@@ -1,5 +1,4 @@
 **/node_modules
-**/private-key.json
-**/Turbin3-wallet.json
 **/target
-**/dev-wallet.json
+*wallet.json
+*key.json
