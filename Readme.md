@@ -1,4 +1,4 @@
-# Turbin3 Cohort 2025
+# Turbin3 Builder Cohort 2025
 
 This is the repository of me doing all Turbin3 Cohort 2025 Assignments. 
 
